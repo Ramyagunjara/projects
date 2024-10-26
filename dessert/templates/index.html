@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Hello Welcome</h1>
+    <hr>
+    <h2>{{ result.brand }}</h2>
+    <h2>{{ result.flavour }}</h2>
+    <h2>{{ result.quantity }}</h2>
+    <h2>{{ result.price }}</h2>
+</body>
+</html>
+<form  method="POST">{% csrf_token %}
+    <label for="n1">entertitle</label>
+    <input type="text" name="title" id="n1" placeholder="entertitle" required><br><br>
+    <label for="n2">enterdescription</label>
+    <input type="text" name="description" id="n2" placeholder="enterdescription" required><br><br>
+    <button type="submit">submit</button>
+</form>
+<hr>
+{% if result %}
+   <h3>{{ res.title }}</h3>
+   <h3>{{ res.description }}</res></h3>
+{% endif %}  
+<form  method="POST">{% csrf_token %}
+    <label for="r1">enter name</label>
+    <input type="text" name="name" id="r1" placeholder="enter name" required><br><br>
+    <label for="r2">enter number</label>
+    <input type="number" name="number" id="r2" placeholder="enter number" required><br><br>
+    <button type="submit">submit</button>
+</form>
+<hr>
+{% if result %}
+   <h3>{{ res.name }}</h3>
+   <h3>{{ res.number }}</res></h3>
+{% endif %}

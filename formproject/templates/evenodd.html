@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvenOdd</title>
+</head>
+<body>
+    <h1>This page is for evenodd</h1>
+    <hr>
+    <form method="POST">{% csrf_token %}
+    <label for="num">number:</label>   
+    <input id="number" type="number" name="num" placeholder="Enter number" required>
+    {% if res %}
+       <h2>Given number is even</h2>
+    {% else %}
+       <h2>Given number is odd</h2>
+    {% endif %}      
+</body>
+</html>

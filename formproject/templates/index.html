@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>This page is for Form Submission</h1>
+    <hr>
+    <form method="POST">{% csrf_token %}
+        <label for="sname">Name :</label>
+        <input name="sname" type="text" placeholder="Enter Name">
+        <br><br>
+        <label for="num">number:</label> 
+        <input id="number" name="num" text="number" placeholder="Enter Rollno">
+        <br><br><button>submit</button>
+    </form>
+</body>
+</html>

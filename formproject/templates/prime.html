@@ -1,0 +1,27 @@
+<!-- prime_check.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+    <h1>Prime Number Checker</h1>
+    <form method="GET">
+        <input type="number" name="number" placeholder="Enter a number">
+        <br><br>
+        <button type="submit">Check Prime</button>
+    </form>
+    {% if number %}
+        {% if is_prime %}
+            <p>{{ number }} is a prime number.</p>
+        {% else %}
+            <p>{{ number }} is not a prime number.</p>
+        {% endif %}
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

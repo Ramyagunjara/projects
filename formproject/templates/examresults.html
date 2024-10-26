@@ -1,0 +1,15 @@
+<html>
+    <title>Form</title>
+    <body>
+        <h1>This page is for form submission</h1>
+        <hr>
+
+        <form method="POST">{% csrf_token %}
+            <label for="n1">Rollno:</label>
+            <input name="sname" id="n1" type="text" placeholder="entername">
+            <br><br><button>submit</button>
+        </form>
+        <p>The student details:{{ student.rollno }}<br> name:{{ student.name }}<br>noofps:{{student.ps }}<br>nooffs{{ student.fs }}</p>
+    </body>
+
+</html>

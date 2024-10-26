@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <h1>Armstrong Number Checker</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number" name="number" required>
+        <br><br>
+        <button>submit</button>
+    </form>
+    {% if result is not None %}
+        <h2>Result:</h2>
+        {% if result %}
+            <p>{{ number }} is an Armstrong number.</p>
+        {% else %}
+            <p>{{ number }} is not an Armstrong number.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
